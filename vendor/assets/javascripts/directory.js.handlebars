@@ -1,0 +1,67 @@
+<div class='list-controls'>
+  <div class="container">
+    <ul class="nav nav-pills" id='category-filter'>
+      {{#each controller.availableNavItems}}
+        {{view Discourse.NavItemView contentBinding="this"}}
+      {{/each}}
+  </ul>
+  
+  <section class="category-column first">
+    {{view Discourse.TextField valueBinding="controller.username"  styleKey='width:300px;' placeholder="Search for a user by name, username, or email..."}}
+  </section>
+
+  <section class="category-column first">
+      {{#each contentOdd}}
+
+  <table id='topic-list' style='margin-bottom:12px;'>
+    <tr>
+      <th>
+        <a href="/users/{{unbound username}}">
+          {{avatar this imageSize="small"}} 
+          {{unbound name}}
+        </a>
+      </th>
+    </tr>
+    <tr>
+      <td class='main-link'> <a href="mailto:{{unbound email}}">{{unbound email}}</a></td>
+   </tr>
+   <tr>
+     <td>
+     </td>
+   </tr>  
+ </table>
+  {{/each}}
+</section>
+
+  <section class="category-column">
+    {{#each contentEven}}
+
+  <table id='topic-list' style='margin-bottom:12px;'>
+    <tr>
+      <th>
+        <a href="/users/{{unbound username_lower}}">
+          {{avatar this imageSize="small"}}
+          {{unbound name}} 
+        </a>
+      </th>
+    </tr>
+    <tr>
+      <td class='main-link'> <a href="mailto:{{unbound email}}">{{unbound email}}</a></td>
+   </tr>
+   <tr>
+     <td>
+     </td>
+   </tr>  
+ </table>
+ 
+  {{/each}}
+</section>
+
+
+<div class='clearfix'></div>
+
+{{#if content.length}}
+
+{{else}}
+  <div>We couldn't find any users!</div>
+{{/if}}
