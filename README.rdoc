@@ -17,13 +17,13 @@
 
 4) Add 'Directory' as a top nav item
 
-Add 'directory' to `validNavNames`  in `app/assets/javascripts/discourse/models/nav_item.js`
+Add 'directory' to validNavNames  in app/assets/javascripts/discourse/models/nav_item.js
 
 Start your server and head to the Site Settings. Add 'directory' as a top_menu item in the pipe-separated list.
 
-5) Add copy to translations file under 'filters' (at line 569 as of this writing)
+5) Add copy to translations file under 'filters' (at line 588 as of this writing)
 
-`app/config/locals/client.en.yml`
+  app/config/locals/client.en.yml
 
 filters:
   directory:
