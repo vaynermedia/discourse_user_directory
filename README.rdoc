@@ -9,7 +9,7 @@
 
 2) Add gem to Discourse Gemfile
 
-  gem 'discourse_user_directory', path: 'vendor/gems/discourse_user_directory'
+  gem 'discourse_user_directory', path: 'vendor/gems/discourse-user-directory'
 
 3) Bundle Install
 
