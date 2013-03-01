@@ -5,11 +5,11 @@
 1) Add discourse-user-directory to your Discourse app's vendor/gems directory
 
   $ cd vendor/gems
-  $ git clone git://github.com/vaynermedia/discourse-user-directory.git
+  $ git clone git://github.com/vaynermedia/discourse_user_directory.git
 
 2) Add gem to Discourse Gemfile
 
-  gem 'discourse_user_directory', path: 'vendor/gems/discourse-user-directory'
+  gem 'discourse_user_directory', path: 'vendor/gems/discourse_user_directory'
 
 3) Install Gems
 
