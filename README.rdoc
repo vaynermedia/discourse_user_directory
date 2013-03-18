@@ -2,7 +2,7 @@
 
 = Installation
 
-1) Add discourse-user-directory to your Discourse app's vendor/gems directory
+1) Add discourse_user_directory to your Discourse app's vendor/gems directory
 
   $ cd vendor/gems
   $ git clone git://github.com/vaynermedia/discourse_user_directory.git
