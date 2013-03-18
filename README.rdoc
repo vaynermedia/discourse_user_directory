@@ -23,7 +23,7 @@ Start your server and head to the Site Settings. Add 'directory' as a top_menu i
 
 5) Add copy to translations file under 'filters' (at line 588 as of this writing)
 
-  app/config/locals/client.en.yml
+  config/locales/client.en.yml
 
   filters:
     directory:
