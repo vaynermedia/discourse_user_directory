@@ -2,6 +2,41 @@
 
 = Installation
 
+1) Add discourse_user_directory to the plugin section of your app.yml file. Once connected to your server:
+
+cd /var/docker
+nano containers/app.yml
+
+Use arrow keys on your keyboard to navigate down to the plugin section. The following comment precedes the plugin specification area:
+
+## The docker manager plugin allows you to one-click upgrade Discourse. 
+
+Add an additional line below the Docker container plugin:
+
+- git clone https://github.com/www2014/discourse_user_directory11
+
+Double-check the spacing on the line so that it is consistent with the Docker container plugin. Then save the app.yml file with Ctrl+O. Return to the command line with Ctrl+X.
+
+2) Rebuild Discourse
+
+./launcher rebuild app
+
+This process will take approximately 10 minutes. Once the rebuild is complete, the user directory plugin should be functional.
+
+3) Insert directory menu
+
+The plugin creates a directory which is viewed at discourse.yoursite.com/directory. To allow users to easily find the directory, you'll need to add a menu item to Discourse itself.
+
+Login as administrator to your Discourse instance.
+
+Navigate to Settings tab, then Basic Options
+
+Type directory (next to new, top, categories, etc.) into the setting top_menu.
+
+Save the setting. A link to the user directory should now be viewable to all users in your forum's top menu.
+
+= Pre-Docker Installation
+
 1) Add discourse_user_directory to your Discourse app's vendor/gems directory
 
   $ cd vendor/gems
